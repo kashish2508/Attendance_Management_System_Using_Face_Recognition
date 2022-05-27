@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block title %}
+Welcome to Microsoft
+{% endblock %}
+
+{% block content %}
+<div class="position-relative overflow-hidden p-4 p-md-4 m-md-3 text-center bg-dark" style="color:white">
+<div  class="col-md-5 p-lg-5 mx-auto my-5">
+  <img class="mb-4" width="250" height="200" src="https://c.tenor.com/JRAwarKcQwwAAAAC/microsoft-intro.gif" alt="">
+  <h1 class="display-4 font-weight-normal">Microsoft</h1>
+  
+  <div class="container">
+      <div class="row">
+        <div class="col-xs-ml-6">
+          <a type="button" style="margin:15px;" id="slide_start_button" value="Start" class="btn btn-success"href="{{ url_for('adminlogin') }}" >Login as an admin</a>
+        </div>
+        <div class="col-xs-4">
+          <a type="button" style="margin:15px;" id="slide_stop_button" value="Stop" class="btn btn-success"href="{{ url_for('employeelogin') }}">Login as an employee</a>
+        </div>
+      </div>
+    </div>
+</div>
+
+</div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

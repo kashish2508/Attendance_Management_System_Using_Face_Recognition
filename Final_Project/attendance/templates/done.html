@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% block title %}
+Welcome to Microsoft
+{% endblock %}
+{% block style %}
+<style>
+ 
+.button {
+background-color: #a5a1a1;
+color: green;
+padding: 8px 8px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+width: 10%;
+}
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
+}
+
+
+</style>
+{% endblock %} 
+{% block nav %}
+
+<button class="nav-item" onclick="window.location='http://localhost:5000/dropsession'" type="='submit">Logout</button>
+    
+
+
+{% endblock %}
+{% block content %}
+
+<br>
+<h5  style="color:aliceblue" > Welcome, {{current_user.username}} !</h5>
+<div class="row">
+  <div class="column">
+    <a href="/attendance/IN"> <img src="https://icon-library.com/images/entry-icon/entry-icon-13.jpg" alt="in" style="width:50%"></a>
+    <br>
+    <br>
+    <h3> Mark your attendance-IN</h3>
+  </div>
+ 
+ <div class="column">
+    <a href="/attendance/OUT"><img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRja2u4aKbyFFT8hwoAQaXs-lZXQslX1pRz6Dq6VbC3JxEgWG4VYfZcqnMlh0hSZLdA7W8&usqp=CAU"  alt="out" style="width:50%"></a>
+    <br>
+    <br>
+    <h3> Mark your attendance-OUT</h3>
+  </div>
+</div>
+    
+ 
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

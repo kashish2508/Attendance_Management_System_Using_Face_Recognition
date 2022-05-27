@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% block title %}
+registration
+{% endblock %}
+{% block style %}
+<style>
+    .button {
+background-color: #a5a1a1;
+color: black;
+padding: 8px 8px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+width: 10%;
+}
+
+p{
+   color: black;
+   margin-bottom: 0;
+}
+.container{
+   background-color: rgb(48, 48, 48);
+}
+</style>
+{% endblock %} 
+
+{% block nav %}
+
+<button class="nav-item" onclick="window.location='http://localhost:5000/dropsession'" type="='submit">Logout</button>  
+{% endblock %}
+{% block content %}
+<br>
+<h5 style="color:aliceblue" > Welcome, {{user}} !</h5>
+<br>
+<h3 >
+    New Employee Registration Form         
+</h3>
+
+ <div class="container">
+     
+     <form method="POST" class="form-register" style="color:white">
+         
+        {{ form.hidden_tag() }}
+         <br>
+         {{ form.emp_no.label() }}
+         {{ form.emp_no(class="form-control")}}
+
+         {{ form.emp_firstname.label() }}
+         {{ form.emp_firstname(class="form-control" )}}
+
+         {{ form.emp_lastname.label() }}
+         {{ form.emp_lastname(class="form-control") }}
+         
+        
+         {{ form.emp_photolocation.label() }}
+         {{ form.emp_photolocation(class="form-control") }}
+         
+        
+         {{ form.emp_audiolocation.label() }}
+         {{ form.emp_audiolocation(class="form-control") }}
+        
+
+         {{ form.username.label() }}
+         {{ form.username(class="form-control") }}
+
+         {{ form.password1.label() }}
+         {{ form.password1(class="form-control") }}
+
+         {{ form.password2.label() }}
+         {{ form.password2(class="form-control") }}
+
+         <br>
+
+         {{ form.submit(class="btn btn-lg btn-block btn btn-success") }}
+
+     </form>
+ </div>
+
+ {% endblock %}
+
+
