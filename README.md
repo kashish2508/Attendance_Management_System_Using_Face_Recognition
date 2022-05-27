@@ -45,4 +45,4 @@ EMPLOYEE:- <br>
 2.open directory Final_project incommand prompt. <br>
 3.run **``` pip install -r requirements.txt inside Final_project ```** directory <br>
 4.Run **``` python run.py ```** inside **``` Final_project ```** directory to run the project <br>
-  imp note:- carefully check all the path of files in attendance_in.py and attendance_out.py and set them according to the complete path of your folders Or file.
+  imp note:- carefully check all the path of files in main_in.py and main_out.py and set them according to the complete path of your folders Or file.
